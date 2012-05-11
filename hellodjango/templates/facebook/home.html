@@ -1,0 +1,13 @@
+{% if facebook_data %}
+<ul>
+	<li>Token: {{ facebook_data.oauth_token }}</li>
+	<li>Username: {{ facebook_data.user.username }}</li>
+	<li>ID: {{ facebook_data.user.id }}</li>
+</ul>
+
+<a href="/facebook/friends/"><button>Get Facebook friends user_ids</button></a>
+<a href="/facebook/auth/"><button>Re-authenticate with Facebook</button></a>
+
+{% else %}
+	<a href="/facebook/auth/"><button>Authenticate with Facebook</button></a>
+{% endif %}
