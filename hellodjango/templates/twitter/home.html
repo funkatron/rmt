@@ -1,0 +1,15 @@
+{% if twitter_data %}
+<ul>
+	<li>Token: {{ twitter_data.oauth_token }}</li>
+	<li>Screen name: {{ twitter_data.screen_name }}</li>
+	<li>User ID: {{ twitter_data.user_id }}</li>
+</ul>
+
+<a href="/twitter/friends/"><button>Get Twitter friends user_ids</button></a>
+<a href="/twitter/auth/"><button>Re-authenticate with Twitter</button></a>
+
+{% else %}
+	<a href="/twitter/auth/"><button>Authenticate with Twitter</button></a>
+{% endif %}
+
+

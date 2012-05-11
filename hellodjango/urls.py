@@ -7,7 +7,9 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('',
     # Examples:
     url(r'^twitter/$', 'hellodjango.views.home', name='home'),
+    url(r'^twitter/auth/$', 'hellodjango.views.auth', name='auth'),
     url(r'^twitter/cb/$', 'hellodjango.views.cb', name='cb'),
+    url(r'^twitter/friends/$', 'hellodjango.views.friends', name='friends'),
     # url(r'^hellodjango/', include('hellodjango.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
